@@ -1,0 +1,33 @@
+{
+  "name": "ticketify",
+  "version": "1.0.0",
+  "description": "using the spotify API and my knoweledge of databases and servers,   I would like to create a program that can create users and allow them to add favorites and create playlist based on the users taste in music ##User Stories - As a user I would like to create a user - As a user I would like Login into the website - As a user I would like to create favorite artists, tracks and albums     - I would like to see these on my user page - As a user I would like the page to give me suggestins based on my songs - As a user I would like for the website to create a playlist",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelshamah/Project2.git"
+  },
+  "author": "Michael Shamah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michaelshamah/Project2/issues"
+  },
+  "homepage": "https://github.com/michaelshamah/Project2#readme",
+  "dependencies": {
+    "bcrypt": "^0.8.7",
+    "body-parser": "^1.15.2",
+    "ejs": "^2.4.2",
+    "express": "^4.14.0",
+    "express-session": "^1.13.0",
+    "jquery": "^3.0.0",
+    "method-override": "^2.3.6",
+    "mongodb": "^2.1.18",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7",
+    "request": "^2.72.0"
+  }
+}

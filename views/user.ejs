@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Home</title>
+  <link rel="stylesheet" href="">
+  <script src= "../controllers/user.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+</head>
+<body>
+<ul>
+  <% names.forEach(function(artist){ %>
+   <li>
+   <%= artist.name %>
+   <%if (artist.images[0]){ %>
+   <img src="<%= artist.images[0].url %>" alt="">
+   <%} %>
+   </li>
+  <%})%>
+</ul>
+</body>
+</html>
+
