@@ -3,10 +3,10 @@ var request = require('request');
 // const dbConnection = 'mongodb://localhost:27017/spotify';
 // const key= " Bearer BQD5f6pVLf6P070XlmIs_XyfCYQE9y8qe3IWrZohUdGrrO8bkv94yAyZJI12BHo9bbPjLwXA6QImBwJf3fDvOtcBU0edVUjo5sz2zYQbibKY8Kh4ukWyqUg01WdKI31c3Vc2VBBHcAYSyuyJrkCtULcSdAkcxyPmOQZAQp6lMfEpI90rduyro9-Oqkb8ZMlZKenAmWk7C94Sjgy58bU5p7QWZO6Gx-OL4PICZItTxpVqRYum9rTncCnjdzSfAO_5BERwg_-Q5-T8Aob66ge7qOD98A0KW1pCTF0A91LzSw2FRFAMgGBb10QY"
 
-function which(req, res, next){
+function select(req, res, next){
   let type= req.query.searchType
   let text= req.query.searchText
-  let url= `https://api.spotify.com/v1/search?q={text}&type={type}`
+  let url= 'https://api.spotify.com/v1/search?q='+text+'&type='+type
   if (type=== 'artist'){
     request(url, function (error, artist) {
       res.artist= artist
@@ -14,7 +14,9 @@ function which(req, res, next){
     })
   } else if (type=== 'track'){
     request(url, function (error, song) {
+      console.log(url)
       res.song= song
+      console.log(song)
       next()
     })
   } else if (type ==='album'){
@@ -24,6 +26,6 @@ function which(req, res, next){
     })
   }
 }
- module.exports= {which}
+ module.exports= {select}
 
 

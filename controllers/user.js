@@ -2,7 +2,7 @@
 const router = require('express').Router();
 const songsService = require('../models/spotify')
 
-  router.get('/artists', songsService.which, function(req, res){
+  router.get('/artists', songsService.select, function(req, res){
 
     if (req.query.searchType=== 'artist'){
       var artist= JSON.parse(res.artist.body)
@@ -11,6 +11,7 @@ const songsService = require('../models/spotify')
 
     } else if (req.query.searchType=== 'track'){
       var songs =JSON.parse(res.song.body)
+      console.log(songs)
       songs=songs.tracks.items
       res.render('songs', {songs: songs})
 
