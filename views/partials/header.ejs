@@ -1,0 +1,13 @@
+<header>
+  <h1>MIKEY'S WEBSITE</h1>
+  <nav>
+  <ul>
+  <% if (user){ %>
+    <li><a href="http://localhost:3000/user/logout">LOGOUT</a></li>
+  <% } else { %>
+    <li><a href="http://localhost:3000/user/login">LOGIN</a></li>
+    <li><a href="http://localhost:3000/user/new">SIGNUP</a></li>
+  <% } %>
+  </ul>
+  </nav>
+</header>

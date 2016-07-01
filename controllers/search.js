@@ -3,7 +3,7 @@ const router = require('express').Router();
 
 
 router.get('/', function(req, res){
-  res.render('search')
+  res.render('search', {user: req.session.user})
 });
 
 

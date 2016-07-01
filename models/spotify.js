@@ -4,11 +4,11 @@ var request = require('request');
 // const key= " Bearer BQD5f6pVLf6P070XlmIs_XyfCYQE9y8qe3IWrZohUdGrrO8bkv94yAyZJI12BHo9bbPjLwXA6QImBwJf3fDvOtcBU0edVUjo5sz2zYQbibKY8Kh4ukWyqUg01WdKI31c3Vc2VBBHcAYSyuyJrkCtULcSdAkcxyPmOQZAQp6lMfEpI90rduyro9-Oqkb8ZMlZKenAmWk7C94Sjgy58bU5p7QWZO6Gx-OL4PICZItTxpVqRYum9rTncCnjdzSfAO_5BERwg_-Q5-T8Aob66ge7qOD98A0KW1pCTF0A91LzSw2FRFAMgGBb10QY"
 
 function select(req, res, next){
-  let type= req.query.searchType;
-  let text= req.query.searchText;
+  const type= req.query.searchType;
+  const text= req.query.searchText;
 
   request({
-    url: 'https://api.spotify.com/v1/search',
+    url: 'https://api.spotify.com/v1/search/',
     method: 'get',
     qs:{
       q: text,
@@ -17,7 +17,6 @@ function select(req, res, next){
   }, (err, response, data)=>{
     if ( err ) throw err
     res.thing= JSON.parse(data)
-    console.log(res.thing)
     next()
   })
 

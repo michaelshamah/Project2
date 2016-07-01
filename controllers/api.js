@@ -1,13 +1,14 @@
 
 const router = require('express').Router();
 const songsService = require('../models/spotify')
+const ticketService= require('../models/tickets')
 
-  router.get('/search', songsService.select, function(req, res){
+  router.get('/search', songsService.select, ticketService.tickets, function(req, res){
 
     if (req.query.searchType=== 'artist'){
       var artist= res.thing
       var names=artist.artists.items
-      res.render('artists', {names: names})
+      res.render('artists', {names: names, user: req.session.user})
 
     } else if (req.query.searchType=== 'track'){
       var songs =res.thing
