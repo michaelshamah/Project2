@@ -7,7 +7,7 @@ const session        = require('express-session')
 const methodOverride = require('method-override')
 const fs         = ('fs')
 const searchRoute      = require('./controllers/search')
-const userRouter     = require('./controllers/user')
+const userRouter     = require('./controllers/api')
 const app        = express()
 const PORT       = process.env.PORT || 3000
 app.set('views', path.join(__dirname, 'views'))
@@ -20,7 +20,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json())
 
 app.use('/search', searchRoute)
-app.use('/user', userRouter)
+app.use('/api', userRouter)
 
 app.listen(PORT, function(){
   console.log('server is listening on ', PORT)
