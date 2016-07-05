@@ -7,7 +7,7 @@ router.get('/new', function(req,res) {
 
 router.post('/new', createUser, function(req,res) {
   console.log(req.body);
-  res.redirect('login', {user: req.session.user});
+  res.redirect('/user/login', {user: req.session.user});
 });
 
 router.get('/login', function(req,res) {
