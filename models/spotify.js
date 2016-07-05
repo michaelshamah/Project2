@@ -1,6 +1,6 @@
 const { MongoClient } = require('mongodb');
 const request = require('request');
-const dbConnection = 'mongodb://localhost:27017/spotify_users';
+// const dbConnection = 'mongodb://localhost:27017/spotify_users';
 
 
 function select(req, res, next){
