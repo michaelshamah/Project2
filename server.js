@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({extended: false}))
 
-app.use('/search', searchRoute)
+app.use('/', searchRoute)
 app.use('/api', apiRouter)
 app.use('/user', userRouter)
 

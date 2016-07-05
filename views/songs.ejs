@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Home</title>
-  <link rel="stylesheet" href="">
-  <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
-</head>
+  <% include partials/head -%>
 <body>
+  <% include partials/header -%>
   <% include partials/form -%>
 <ol>
   <% songs.forEach(function(track){ %>
    <li>
-   <p>Name: <%= track.name %> </p>
-   <p>Artist: <%= track.artists[0].name %> </p>
-   <p>Album: <%= track.album.name %></p>
+   <p name= "song">Name: <%= track.name %> </p>
+   <p name= "artist">Artist: <%= track.artists[0].name %> </p>
+   <p name= "album" >Album: <%= track.album.name %></p>
    <p> <img src="<%= track.album.images[2].url %>" alt="No Image Available"> </p>
    </li>
   <%})%>
