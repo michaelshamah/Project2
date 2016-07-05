@@ -1,5 +1,6 @@
 const { MongoClient } = require('mongodb');
-const dbConnection = 'mongodb://localhost:27017/spotify_users';
+// const dbConnection = 'mongodb://localhost:27017/spotify_users';
+const dbConnection = process.env['MONGODB_URI'] || 'mongodb://localhost:27017/spotify_users'
 const bcrypt = require('bcrypt');
 const salt = bcrypt.genSalt(10);
 

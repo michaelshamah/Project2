@@ -9,6 +9,12 @@ I would like to create a program that can create users and allow them to add fav
 - As a user I would like the page to give me suggestins based on my songs
 - As a user I would like for the website to create a playlist
 
+##Technologies
+- HTML, CSS, JavaScript
+- Jquery
+- MongoDB
+- Deployment using Heroku
+
 
 ##Resources
 - Spotify API
