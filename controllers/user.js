@@ -2,11 +2,10 @@ const router = require('express').Router();
 const { createUser, loginUser } = require('../models/user');
 
 router.get('/new', function(req,res) {
-  res.render('new', {user: req.session.user});
+  res.render('/new', {user: req.session.user});
 });
 
 router.post('/new', createUser, function(req,res) {
-  console.log(req.body);
   res.redirect('/user/login', {user: req.session.user});
 });
 
