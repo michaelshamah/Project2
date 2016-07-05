@@ -1,6 +1,6 @@
 {
   "name": "ticketify",
-  "enignes":{
+  "engines":{
     "node": "6.2.0"
   },
   "version": "1.0.0",
