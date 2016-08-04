@@ -8,8 +8,7 @@ function tickets(req, res, next){
     url: 'https://app.ticketmaster.com/discovery/v2/events.json',
     method: 'get',
     qs:{
-      keyword: text,
-      apikey: 'e4ORKgtsgbtLZOPFkw2b4DnDU6EP3mfO'
+      keyword: text
     }
   }, (err, response, data)=>{
     if ( err ) throw err
